@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, redirect, jsonify, request, Response
-from Forms import *
+from app.Forms import *
 from requests.auth import HTTPBasicAuth
 import requests
 from werkzeug.utils import secure_filename

@@ -5,13 +5,13 @@ import requests
 from werkzeug.utils import secure_filename
 import base64
 import urllib.request, json
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'any secret string'
+from app import app
 
 @app.route('/')
-def home():
-    return render_template("home.html")
+@app.route('/index')
+def index():
+    return render_template('home.html', title = "home")
+
 
 @app.route('/uploadFile', methods=['GET','POST'])
 def uploadFile():

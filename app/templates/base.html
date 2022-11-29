@@ -15,17 +15,20 @@
             rel="stylesheet" />
 
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="{{ url_for('static',filename='css/custom-styles.css') }}"/>
-        <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}"/>
-        
-        </head>
+        <link rel="stylesheet" href="{{
+            url_for('static',filename='css/custom-styles.css') }}"/>
+        <link rel="stylesheet" href="{{
+            url_for('static',filename='css/styles.css') }}"/>
+
+    </head>
     <body class="d-flex flex-column h-100">
         {% block navbar %}
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg">
                 <div class="shadow container px-5">
-                    <img alt="" src="static/assets/Novaland-logo.jpg" style="width:
+                    <img alt="" src="static/assets/Novaland-logo.jpg"
+                        style="width:
                         130px; height: 81px;">
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse"
@@ -37,24 +40,24 @@
                         id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link
-                                    text-success" href="index.html">Home</a></li>
+                                    text-success" href="index">Home</a></li>
                             <li class="nav-item"><a class="nav-link"
-                                    href="about.html">About</a></li>
+                                    href="#">About</a></li>
                             <li class="nav-item"><a class="nav-link"
-                                    href="contact.html">Contact</a></li>
+                                    href="#">Contact</a></li>
                             <li class="nav-item"><a class="nav-link"
-                                    href="pricing.html">Explore</a></li>
+                                    href="explore">Explore</a></li>
                             <li class="nav-item"><a class="nav-link"
-                                    href="faq.html">Login</a></li>
+                                    href="login">Login</a></li>
                             <li class="nav-item"><a class="nav-link"
-                                     href="faq.html">Signup</a></li>
-       
+                                    href="signup">Signup</a></li>
+
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            
+
         </main>
         {% endblock %}
         {%block content%}
@@ -66,7 +69,7 @@
                 <div class="row align-items-center justify-content-between
                     flex-column flex-sm-row">
                     <div class="col-auto"><div class="small m-0 text-white">Copyright
-                            &copy; Your Website 2022</div></div>
+                            &copy; Novaland 2022</div></div>
                     <div class="col-auto">
                         <a class="link-light small" href="#!">Privacy</a>
                         <span class="text-white mx-1">&middot;</span>

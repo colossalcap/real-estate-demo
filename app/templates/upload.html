@@ -7,10 +7,10 @@ Home
 
 {%block content%}
 <form method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        {{form.hidden_tag()}}
-        {{form.file(class_="form-control-file")}}
-        <input type='submit'>
-    </div>
-  </form>
+  <div class="form-group">
+    {{form.hidden_tag()}}
+    {{form.file(class_="form-control-file")}}
+    <input type='submit'>
+  </div>
+</form>
 {%endblock%}

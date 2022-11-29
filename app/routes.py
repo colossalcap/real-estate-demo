@@ -12,6 +12,21 @@ from app import app
 def index():
     return render_template('home.html', title = "home")
 
+@app.route('/explore')
+def explore():
+    return render_template('explore.html', title = "explore")
+
+@app.route('/login')
+def login():
+    return render_template('login.html', title = "login")
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html', title = "signup")
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', title = "contact")
 
 @app.route('/uploadFile', methods=['GET','POST'])
 def uploadFile():

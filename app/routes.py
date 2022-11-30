@@ -28,6 +28,10 @@ def signup():
 def contact():
     return render_template('contact.html', title = "contact")
 
+@app.route('/listing')
+def listing():
+    return render_template('listing-page.html', title = "listing")
+
 @app.route('/uploadFile', methods=['GET','POST'])
 def uploadFile():
     form = APIForm()

@@ -32,6 +32,24 @@ def contact():
 def listing():
     return render_template('listing-page.html', title = "listing")
 
+@app.route('/get-listing-images')
+def get_listing_images():
+    response = json.loads(requests.get('https://demoepoce-apacaseanset01.cec.ocp.oraclecloud.com/content/management/api/v1.1/items', auth=('oic.user02', 'Oic12345####')).content)
+    processed_response = response.get('items')
+    for item in processed_response:
+        print("hi")
+
+    return processed_response
+
+
+@app.route('/test')
+def test():
+
+    return requests.post('https://demoepoce-apacaseanset01.cec.ocp.oraclecloud.com/content/management/api/v1.1/items/_download', auth=('oic.user02', 'Oic12345####')).content
+
+
+
+
 @app.route('/uploadFile', methods=['GET','POST'])
 def uploadFile():
     form = APIForm()

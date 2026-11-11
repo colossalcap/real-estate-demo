@@ -1,11 +1,16 @@
+import os
 import cx_Oracle
 import pathlib
 from os.path import dirname
 
 directory =  dirname(pathlib.Path(__file__).parent.resolve())
-cx_Oracle.init_oracle_client(lib_dir=directory+"\Oracle-client\instantclient_21_7")
+cx_Oracle.init_oracle_client(lib_dir=os.environ.get("ORACLE_CLIENT_DIR", os.path.join(directory, "Oracle-client", "instantclient_21_7")))
 
-connection = cx_Oracle.connect(user="admin", password="***REMOVED***", dsn="f58qkvzs1eirgfom_high")
+connection = cx_Oracle.connect(
+    user=os.environ["ORACLE_DB_USER"],
+    password=os.environ["ORACLE_DB_PASSWORD"],
+    dsn=os.environ["ORACLE_DB_DSN"],
+)
 
 cursor = connection.cursor()
 

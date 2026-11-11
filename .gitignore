@@ -39,3 +39,11 @@ Oracle-client/instantclient_21_7/BASIC_README
 Oracle-client/instantclient_21_7/BASIC_LICENSE
 Oracle-client/instantclient_21_7/adrci.sym
 Oracle-client/instantclient_21_7/adrci.exe
+
+# secrets and local files
+.env
+Oracle-client/
+Oracle-client.zip
+.venv/
+venv/
+__pycache__/
